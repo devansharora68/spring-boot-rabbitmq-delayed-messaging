@@ -26,7 +26,7 @@ public class RabbitMQConfig {
 	@Value("${rabbitmq.queue:delayedqueue}")
 	String queueName;
 
-	@Value("${rabbitmq.exchange:ignio.exchange.directdelayed}")
+	@Value("${rabbitmq.exchange:exchange.directdelayed}")
 	String exchange;
 
 	@Value("${rabbitmq.routingkey:delayedqueue}")
