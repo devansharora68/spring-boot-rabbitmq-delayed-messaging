@@ -11,7 +11,7 @@ public class RabbitMQSender {
 	@Autowired
 	private AmqpTemplate rabbitTemplate;
 	
-	@Value("${rabbitmq.exchange:ignio.exchange.directdelayed}")
+	@Value("${rabbitmq.exchange:exchange.directdelayed}")
 	private String exchange;
 	
 	@Value("${rabbitmq.routingkey:delayedqueue}")
