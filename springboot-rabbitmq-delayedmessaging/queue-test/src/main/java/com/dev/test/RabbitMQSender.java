@@ -18,8 +18,7 @@ public class RabbitMQSender {
 	private String routingkey;	
 	
 	public void send(Employee company) {
-		//rabbitTemplate.convertAndSend(exchange, routingkey, company);
-		System.out.println("Send msg = " + company);
+		System.out.println("Sending message = " + company);
 		rabbitTemplate.convertAndSend(exchange,routingkey,company,
 	            message -> {
 	                message.getMessageProperties().setDelay(10000);
