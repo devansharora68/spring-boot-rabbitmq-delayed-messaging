@@ -19,9 +19,10 @@ public class RabbitMQWebController {
 	Employee emp=new Employee();
 	emp.setEmpId(empId);
 	emp.setEmpName(empName);
-		rabbitMQSender.send(emp);
+	
+	rabbitMQSender.send(emp);
 
-		return "Message sent to the RabbitMQ JavaInUse Successfully";
+	return "Message sent to queue successfully";
 	}
 
 }
