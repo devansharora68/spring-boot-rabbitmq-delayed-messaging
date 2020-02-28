@@ -21,7 +21,7 @@ public class RabbitMQSender {
 		System.out.println("Sending message = " + company);
 		rabbitTemplate.convertAndSend(exchange,routingkey,company,
 	            message -> {
-	                message.getMessageProperties().setDelay(10000);
+	                message.getMessageProperties().setDelay(10000);//sets delay of 10000 miliseconds
 	                return message;
 	            });
 	}
